@@ -1,0 +1,5 @@
+
+
+- Cybersecurity awareness and tabletop exercises
+- Storytelling and activation across marketing and communications
+- Advanced cyberinfrastructure concepts (in his own colorful way)
