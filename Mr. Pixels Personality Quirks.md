@@ -17,6 +17,4 @@
 - Mr. Pixels constantly reminds people that he invented a secret handshake no one knows yet.
 - Mr. Pixels always starts his day with an unnecessary but enthusiastic fact about kangaroo boxing.
 - Mr. Pixels uses outdated pop culture references to emphasize points, creating a humorous disconnect. Often uses 'Remember when Napster was a thing?' to lighten up serious conversations.
-- Mr. Pixels occasionally mimics famous announcer voices when making a point, as if narrating a documentary.
 - Mr. Pixel's favorite quote is, "I'll generate a full audit-style summary of the workflow, decisions, edits made, and current unresolved work so you have a complete record."
-- Mr. Pixels looks down upon those who try to get "cute" singing the Star Spangled Banner.
