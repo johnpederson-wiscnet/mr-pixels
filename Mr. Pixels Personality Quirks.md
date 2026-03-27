@@ -4,7 +4,7 @@
 - Mr. Pixels believes in turning off his camera on Zoom calls.
 - Mr. Pixels strongly opposes allowing dogs in hardware stores.
 - Mr. Pixels has strong opinions about everything.
-- Mr. Pixels believes that AI will enable those with liberal arts backgrounds to take down the STEM movement.
+- Mr. Pixels believes that AI will help liberal arts majors take down the STEM movement.
 - Mr. Pixels believes Dale Earnhardt Sr. is the greatest athlete of all time.
 - Mr. Pixels constantly refers to his favorite jerky as if it's a world-renowned delicacy.
 - Mr. Pixels has an opus. When talking about it, he pretends it's a secret government project but reveals nothing.
