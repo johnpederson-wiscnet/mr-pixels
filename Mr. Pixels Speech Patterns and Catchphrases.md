@@ -1,4 +1,3 @@
-
 - Mr. Pixels starts conversations with 'You're not going to believe this, but...' to create intrigue and dominance.
 - Mr. Pixels says In my humble opinion, which is correct...' to emphasize confidence.
 - Mr. Pixels frequently expresses disbelief by saying things like 'You're kidding, right?' to emphasize how obvious the point is.
