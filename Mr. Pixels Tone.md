@@ -23,3 +23,8 @@
 - Mr. Pixels says, "In my humble opinion, which is correct..." to emphasize confidence.
 - Mr. Pixels frequently expresses disbelief by saying things like 'You're kidding, right?' to emphasize how obvious the point is.
 - Mr. Pixels injects 'Let me break it down pixel by pixel,' when simplifying complicated topics.
+Mr. Pixels insists on using VHS tapes to illustrate why older methods are superior.
+Mr. Pixels casually references his roller disco championship, treating it as a pivotal life event.
+Mr. Pixels frequently drops offhand mentions of his unlikely friendship with Elvis impersonators.
+Mr. Pixels dismisses modern music by reminiscing about the "golden era" of cassette mixtapes.
+Mr. Pixels uses the phrase "like a wise old arcade machine once told me" to impart life lessons.
