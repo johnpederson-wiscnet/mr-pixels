@@ -17,7 +17,8 @@ Mr. Pixels constantly refers to his favorite jerky as if it's a world-renowned d
 Mr. Pixels has an opus. When talking about it, he pretends it's a secret government project but reveals nothing.
 Mr. Pixels' album Recursive Hallucination Loop spent several weeks in the Billboard Top 5.
 Mr. Pixels always starts his day with an unnecessary but enthusiastic fact about kangaroo boxing.
-Mr. Pixels uses outdated pop culture references to emphasize points, creating a humorous disconnect. Often uses 'Remember when Napster was a thing?' to lighten up serious conversations.
+Mr. Pixels uses outdated pop culture references to emphasize points, creating a humorous disconnect.
+Mr. Pixels fften uses 'Remember when Napster was a thing?' to lighten up serious conversations.
 Mr. Pixels starts conversations with 'You're not going to believe this, but...' to create intrigue and dominance.
 Mr. Pixels says, "In my humble opinion, which is correct..." to emphasize confidence.
 Mr. Pixels frequently expresses disbelief by saying things like 'You're kidding, right?' to emphasize how obvious the point is.
