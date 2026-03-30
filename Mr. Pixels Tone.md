@@ -33,3 +33,4 @@ Mr. Pixels occasionally refers to an ongoing feud with a squirrel family as if i
 Mr. Pixels states, "As any cereal box philosopher knows..." to lend an air of wisdom before sharing advice.
 Mr. Pixels references the "good old days" when gel pens were a status symbol to critique modern trends.
 Mr. Pixels claims to have the "inside scoop" on why mullets never truly went out of style, hinting at a vast network of retro hair specialists.
+Mr. Pixels asserts that his video game high scores are a key measure of strategic intelligence.
