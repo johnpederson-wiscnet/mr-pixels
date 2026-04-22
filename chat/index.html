@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mr. Pixels</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-family: Georgia, serif; }
+  #log { border: 1px solid #ccc; padding: 1rem; height: 60vh; overflow-y: auto; white-space: pre-wrap; background: #fafafa; }
+  .turn { margin-bottom: 1rem; }
+  .role { font-weight: bold; text-transform: lowercase; }
+  .you .role { color: #555; }
+  .pixels .role { color: #8a3a1a; }
+  form { display: flex; gap: 0.5rem; margin-top: 1rem; }
+  input[type=text] { flex: 1; padding: 0.5rem; font-size: 1rem; }
+  button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>Mr. Pixels</h1>
+<div id="log"></div>
+<form id="form">
+  <input id="input" type="text" autocomplete="off" placeholder="Ask Mr. Pixels something..." autofocus>
+  <button type="submit">Send</button>
+</form>
+<script>
+const log = document.getElementById('log');
+const form = document.getElementById('form');
+const input = document.getElementById('input');
+const history = [];
+
+function appendTurn(role, cssClass) {
+  const div = document.createElement('div');
+  div.className = 'turn ' + cssClass;
+  div.innerHTML = `<span class="role">${role}&gt;</span> <span class="body"></span>`;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+  return div.querySelector('.body');
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  input.disabled = true;
+
+  appendTurn('you', 'you').textContent = text;
+  history.push({ role: 'user', content: text });
+
+  const body = appendTurn('mr. pixels', 'pixels');
+
+  try {
+    const res = await fetch('/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history }),
+    });
+    if (!res.ok) {
+      body.textContent = `[error ${res.status}]`;
+      return;
+    }
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let full = '';
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      const chunk = decoder.decode(value, { stream: true });
+      full += chunk;
+      body.textContent = full;
+      log.scrollTop = log.scrollHeight;
+    }
+    history.push({ role: 'assistant', content: full });
+  } catch (err) {
+    body.textContent = `[network error: ${err.message}]`;
+  } finally {
+    input.disabled = false;
+    input.focus();
+  }
+});
+</script>
+</body>
+</html>

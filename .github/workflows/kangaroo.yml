@@ -1,0 +1,32 @@
+name: Daily Kangaroo Fact
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 13:00 UTC ≈ 7am Central
+  workflow_dispatch:
+
+jobs:
+  kangaroo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r chat/requirements.txt
+      - run: python chat/kangaroo.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Commit fact
+        run: |
+          git config user.name 'Mr. Pixels Bot'
+          git config user.email 'mr-pixels-bot@users.noreply.github.com'
+          git add KANGAROO_LOG.md
+          if git diff --staged --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "kangaroo: $(date -u +%Y-%m-%d)"
+            git push
+          fi
