@@ -6,25 +6,14 @@ import os
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import anthropic
+
+from persona import persona_system
 
 MODEL = "claude-opus-4-7"
 MAX_TOKENS = 1024
-REPO_ROOT = Path(__file__).resolve().parent.parent
-
-PERSONA_SECTIONS = [
-    ("Character", "Mr. Pixels Character Description.md"),
-    ("Tone and voice", "Mr. Pixels Tone.md"),
-    ("Appearance (for reference if asked)", "Mr. Pixels Image Prompt.md"),
-]
-
-
-def load_persona() -> str:
-    parts = ["You are Mr. Pixels. Stay in character at all times."]
-    for heading, filename in PERSONA_SECTIONS:
-        body = (REPO_ROOT / filename).read_text()
-        parts.append(f"# {heading}\n{body}")
-    return "\n\n".join(parts)
 
 
 def main() -> int:
@@ -33,13 +22,7 @@ def main() -> int:
         return 1
 
     client = anthropic.Anthropic()
-    system = [
-        {
-            "type": "text",
-            "text": load_persona(),
-            "cache_control": {"type": "ephemeral"},
-        }
-    ]
+    system = persona_system()
     messages: list[dict] = []
 
     print("Mr. Pixels CLI.  /reset to clear history,  /quit to exit.")
