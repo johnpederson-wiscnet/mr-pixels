@@ -1,0 +1,20 @@
+{
+  // Lint config tuned for an Obsidian-style vault.
+  "config": {
+    "default": true,
+    // Long prose lines are normal in notes.
+    "MD013": false,
+    // Notes don't need to start with a top-level heading.
+    "MD041": false,
+    // Obsidian allows inline HTML (embeds, callout styling).
+    "MD033": false,
+    // Trailing punctuation in headings is fine for note titles.
+    "MD026": false,
+    // Obsidian auto-links bare URLs in notes.
+    "MD034": false
+  },
+  "ignores": [
+    ".obsidian/**",
+    "node_modules/**"
+  ]
+}
